@@ -52,13 +52,7 @@
     {
       "group": "Endpoints",
       "pages": [
-        "api-reference/endpoints/website_check"
-      ]
-    },
-    {
-      "group": "Advanced",
-      "pages": [
-        "api-reference/jobs",
+        "api-reference/endpoints/profile",
         "api-reference/usage"
       ]
     }

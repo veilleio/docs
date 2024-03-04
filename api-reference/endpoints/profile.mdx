@@ -1,0 +1,197 @@
+---
+title: "Linkdin Profile Scraper"
+api: "GET https://veille.io/api/v1/scraper/profile"
+description: "This endpoint allows you to scrape a LinkedIn profile."
+---
+
+### Header
+
+<ParamField header="x-api-key" type="string" required={true}>
+    This parameter specifies the private key you'll need for Veille.io access.
+</ParamField>
+
+### Parameters
+
+#### Search Query
+
+<ParamField query="query" type="string" required={true}>
+    Linkedin profile URL to check : `https://www.linkedin.com/in/username`
+</ParamField>
+
+### Response
+
+<ResponseField name="Website" type="object">
+    <Expandable title="resume" defaultOpen={false} type="array">
+        <ResponseField name="field" type="string">
+            Field of expertise
+        </ResponseField>
+        <ResponseField name="place" type="string">
+            Place of work
+        </ResponseField>
+        <ResponseField name="title" type="string">
+            Title
+        </ResponseField>
+        <ResponseField name="category" type="string">
+            Category
+        </ResponseField>
+        <ResponseField name="date_end" type="string">
+            End date
+        </ResponseField>
+        <ResponseField name="location" type="string">
+            Location
+        </ResponseField>
+        <ResponseField name="place_id" type="string">
+            Place ID
+        </ResponseField>
+        <ResponseField name="full_name" type="string">
+            Full name
+        </ResponseField>
+        <ResponseField name="date_start" type="string">
+            Start date
+        </ResponseField>
+        <ResponseField name="profile_id" type="string">
+            Profile ID
+        </ResponseField>
+        <ResponseField name="description" type="string">
+            Description
+        </ResponseField>
+    </Expandable>
+</ResponseField>
+
+<RequestExample>
+
+```bash Example Request
+curl --location --request GET 'https://veille.io/api/v1/scraper/profile?query=https://www.linkedin.com/in/williamhgates' \
+--header 'Content-Type: application/json' \
+--header 'x-api-key: <token>' 
+```
+
+</RequestExample>
+
+<ResponseExample>
+```json Response Example
+{
+    "resume": [
+        {
+            "field": "Management Consulting",
+            "place": "Breakthrough Energy ",
+            "title": "Founder",
+            "category": "Experience",
+            "date_end": "Present",
+            "location": null,
+            "place_id": "19141006",
+            "full_name": "Bill Gates",
+            "date_start": "2015-00",
+            "profile_id": "ACoAAA8BYqEBCGLg_vT_ca6mMEqkpp9nVffJ3hc",
+            "description": null,
+            "profile_url": "https://www.linkedin.com/in/ACoAAA8BYqEBCGLg_vT_ca6mMEqkpp9nVffJ3hc",
+            "date_extract": "2024-03-04 17:31:25"
+        },
+        {
+            "field": "Nonprofit Organization Management",
+            "place": "Bill & Melinda Gates Foundation",
+            "title": "Co-chair",
+            "category": "Experience",
+            "date_end": "Present",
+            "location": null,
+            "place_id": "8736",
+            "full_name": "Bill Gates",
+            "date_start": "2000-00",
+            "profile_id": "ACoAAA8BYqEBCGLg_vT_ca6mMEqkpp9nVffJ3hc",
+            "description": null,
+            "profile_url": "https://www.linkedin.com/in/ACoAAA8BYqEBCGLg_vT_ca6mMEqkpp9nVffJ3hc",
+            "date_extract": "2024-03-04 17:31:25"
+        },
+        {
+            "field": "Computer Software",
+            "place": "Microsoft",
+            "title": "Co-founder",
+            "category": "Experience",
+            "date_end": "Present",
+            "location": null,
+            "place_id": "1035",
+            "full_name": "Bill Gates",
+            "date_start": "1975-00",
+            "profile_id": "ACoAAA8BYqEBCGLg_vT_ca6mMEqkpp9nVffJ3hc",
+            "description": null,
+            "profile_url": "https://www.linkedin.com/in/ACoAAA8BYqEBCGLg_vT_ca6mMEqkpp9nVffJ3hc",
+            "date_extract": "2024-03-04 17:31:25"
+        },
+        {
+            "field": null,
+            "place": "Harvard University",
+            "title": null,
+            "category": "Education",
+            "date_end": "1975-00",
+            "location": null,
+            "place_id": "18483",
+            "full_name": "Bill Gates",
+            "date_start": "1973-00",
+            "profile_id": "ACoAAA8BYqEBCGLg_vT_ca6mMEqkpp9nVffJ3hc",
+            "description": null,
+            "profile_url": "https://www.linkedin.com/in/ACoAAA8BYqEBCGLg_vT_ca6mMEqkpp9nVffJ3hc",
+            "date_extract": "2024-03-04 17:31:25"
+        },
+        {
+            "field": null,
+            "place": "Lakeside School",
+            "title": null,
+            "category": "Education",
+            "date_end": null,
+            "location": null,
+            "place_id": "3164077",
+            "full_name": "Bill Gates",
+            "date_start": null,
+            "profile_id": "ACoAAA8BYqEBCGLg_vT_ca6mMEqkpp9nVffJ3hc",
+            "description": null,
+            "profile_url": "https://www.linkedin.com/in/ACoAAA8BYqEBCGLg_vT_ca6mMEqkpp9nVffJ3hc",
+            "date_extract": "2024-03-04 17:31:25"
+        }
+    ],
+    "contact": {
+        "email": null,
+        "address": null,
+        "twitter": null,
+        "website": "https://gatesnot.es/UnconfuseMe",
+        "birthdate": null,
+        "phone_number": null
+    },
+    "identity": {
+        "region": "Seattle, Washington",
+        "address": null,
+        "country": "United States",
+        "summary": "Co-chair of the Bill & Melinda Gates Foundation. Founder of Breakthrough Energy. Co-founder of Microsoft. Voracious reader. Avid traveler. Active blogger.",
+        "lastname": "Gates",
+        "location": "United States",
+        "birthdate": null,
+        "firstname": "Bill",
+        "public_id": "williamhgates",
+        "occupation": "Co-chair, Bill & Melinda Gates Foundation",
+        "profile_id": "ACoAAA8BYqEBCGLg_vT_ca6mMEqkpp9nVffJ3hc",
+        "profile_url": "https://www.linkedin.com/in/ACoAAA8BYqEBCGLg_vT_ca6mMEqkpp9nVffJ3hc",
+        "industry_name": "Philanthropy",
+        "profile_picture": "https://media.licdn.com/dms/image/D5603AQHv6LsdiUg1kw/profile-displayphoto-shrink_800_800/0/1695167344576?e=1715212800&v=beta&t=yD1V6V3u4V9ud78pzS3G8z-bT47mctkGjX0XafOOnbM",
+        "background_picture": "https://media.licdn.com/dms/image/D5616AQHy2R5tyt2YUA/profile-displaybackgroundimage-shrink_350_1400/0/1672782785474?e=1715212800&v=beta&t=Rp0dB8B7r_Ev95xgsqMcywjQ0nLBIK7nf3kzhJLW7eI"
+    },
+    "top_card": {
+        "date_end": "Present",
+        "hashtags": null,
+        "location": "US",
+        "full_name": "Bill Gates",
+        "last_name": "Gates",
+        "public_id": "williamhgates",
+        "date_start": "2000",
+        "first_name": "Bill",
+        "occupation": "Co-chair, Bill & Melinda Gates Foundation",
+        "profile_id": "ACoAAA8BYqEBCGLg_vT_ca6mMEqkpp9nVffJ3hc",
+        "school_url": "https://www.linkedin.com/school/1646",
+        "company_url": "https://www.linkedin.com/company/8736",
+        "connections": 9,
+        "school_name": "Harvard University",
+        "company_name": "Bill & Melinda Gates Foundation",
+        "date_extract": "2024-02-22 17:11:59",
+        "follower_count": 35065577
+    }
+}
+```
+</ResponseExample>

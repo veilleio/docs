@@ -1,0 +1,20 @@
+{
+  "name": "piloterr-docs",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "npx mintlify dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/piloterr/docs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/piloterr/docs/issues"
+  },
+  "homepage": "https://github.com/piloterr/docs#readme",
+  "dependencies": {
+    "mintlify": "^4.0.130"
+  }
+}
