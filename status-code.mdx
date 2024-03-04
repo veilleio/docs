@@ -1,0 +1,16 @@
+---
+title: Status Code
+description: "The following list of HTTP codes are returned by Veille.io."
+---
+
+## Status Code
+
+| Status Code | Is Billed? | Explanation                        | Resolution                                                                                                         |
+| ----------- | ---------- | ----------------------------       | ------------------------------------------------------------------------------------------------------------------ |
+| 200         | Yes        | Successful API Call                | No action required.                                                                                               |
+| 201         | Yes        | Successful Job Created             | No action required.                                                                                               |
+| 400         | No         | Incorrect or Incomplete Request    | Verify your parameters and their types. Check the detailed error message in the response body for more information. |
+| 404         | No         | Job not found                      | Check the URL used in the request.                                                                                |
+| 403         | No         | API Rate Limit Exceeded            | Consider upgrading your current plan or get in touch with our sales team.                                         |
+| 405         | No         | Invalid HTTP Method                | Check the HTTP method used in the request.                                                                         |
+| 500         | No         | Unexpected Error                   | Retry the action and check the detailed error message in the response body for more insights.                     |

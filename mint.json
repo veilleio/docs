@@ -1,91 +1,70 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Starter Kit",
+  "name": "Veille.io",
   "logo": {
     "dark": "/logo/dark.svg",
     "light": "/logo/light.svg"
   },
-  "favicon": "/favicon.svg",
+  "versions": ["v1"],
+  "feedback": {
+    "thumbsRating": true
+  },
+  "favicon": "/favicon.png",
   "colors": {
     "primary": "#0D9373",
-    "light": "#07C983",
+    "light": "#55D799",
     "dark": "#0D9373",
     "anchors": {
-      "from": "#0D9373",
-      "to": "#07C983"
+      "from": "#117866",
+      "to": "#2AB673"
     }
   },
   "topbarLinks": [
     {
       "name": "Support",
-      "url": "mailto:hi@mintlify.com"
+      "url": "mailto:josselin@veille.io"
     }
   ],
   "topbarCtaButton": {
     "name": "Dashboard",
-    "url": "https://dashboard.mintlify.com"
+    "url": "https://veille.io/login"
   },
   "tabs": [
     {
       "name": "API Reference",
-      "url": "api-reference"
+      "icon": "rectangle-terminal",
+      "url": "api-reference",
+      "version": "v1"
     }
   ],
   "anchors": [
     {
-      "name": "Documentation",
-      "icon": "book-open-cover",
-      "url": "https://mintlify.com/docs"
-    },
-    {
       "name": "Community",
-      "icon": "slack",
-      "url": "https://mintlify.com/community"
-    },
-    {
-      "name": "Blog",
-      "icon": "newspaper",
-      "url": "https://mintlify.com/blog"
+      "icon": "discord",
+      "url": "https://discord.com/invite/Y7U5Ka73yT"
     }
   ],
   "navigation": [
     {
       "group": "Get Started",
+      "pages": ["introduction", "authentication", "status-code"]
+    },
+    {
+      "group": "Endpoints",
       "pages": [
-        "introduction",
-        "quickstart",
-        "development"
+        "api-reference/endpoints/website_check"
       ]
     },
     {
-      "group": "Essentials",
+      "group": "Advanced",
       "pages": [
-        "essentials/markdown",
-        "essentials/code",
-        "essentials/images",
-        "essentials/settings",
-        "essentials/navigation",
-        "essentials/reusable-snippets"
-      ]
-    },
-    {
-      "group": "API Documentation",
-      "pages": [
-        "api-reference/introduction"
-      ]
-    },
-    {
-      "group": "Endpoint Examples",
-      "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/delete"
+        "api-reference/jobs",
+        "api-reference/usage"
       ]
     }
   ],
   "footerSocials": {
-    "twitter": "https://twitter.com/mintlify",
-    "github": "https://github.com/mintlify",
-    "linkedin": "https://www.linkedin.com/company/mintsearch"
+    "github": "https://github.com/veilleio",
+    "linkedin": "https://www.linkedin.com/company/veilleio"
   }
 }

@@ -1,0 +1,40 @@
+---
+title: "Usage"
+api: "GET https://veille.io/api/usage"
+description: "Get usage information for your account."
+---
+
+### Header
+
+<ParamField header="x-api-key" type="string" required={true}>
+    This parameter specifies the private key you'll need for Veille.io access.
+</ParamField>
+
+### Response
+
+<ResponseField name="plan" type="string">
+    Plan name
+</ResponseField>
+
+<ResponseField name="remaining" type="string">
+    Remaining requests
+</ResponseField>
+
+<RequestExample>
+
+```bash Example Request
+curl --location --request GET 'https://veille.io/api/usage' \
+--header 'Content-Type: application/json' \
+--header 'x-api-key: <token>' \
+```
+
+</RequestExample>
+
+<ResponseExample>
+```json Response
+{
+    "plan": "API",
+    "remaining": "58485"
+}
+```
+</ResponseExample>

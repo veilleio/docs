@@ -1,0 +1,55 @@
+---
+title: "Authentication"
+description: "After completing this quick start guide you'll have generated and tested an authentication token that can be used in all subsequent requests to the Veille.io API."
+---
+
+## How to Create an Account
+
+Navigate to the [Veille.io Dashboard](https://veille.io/login) and simply follow the steps to log in or create a new account.
+
+## Retrieving a Token
+
+After you've logged in to the dashboard, follow these steps to get a token:
+
+1.  Click **API Keys**.
+2.  Select **New**.
+3.  Assign a name for the token. This helps in future referencing. You can also add notes to describe its use-case, then select **Save**.
+
+A new token will be displayed in text format with a **copy to clipboard** button. Use this button to copy the token and secure it in a safe place.
+
+<Tip>
+    Remember that you can view the logs and track the number of requests made on the dashboard.
+</Tip>
+
+## Testing the Token
+
+Once you have your token, you can test it using the Terminal. Set up the environment by entering and executing the following command. Replace `<TOKEN>` with the token you've copied from the Veille.io dashboard:
+
+```bash
+export VEILLEAPI_TOKEN="<TOKEN>"
+```
+
+This step eliminates the need to copy and paste the token each time it's in use. You are now ready to make a call to the Veille.io Usage service. Use the following command to proceed:
+
+```bash
+curl -H "x-api-key: $VEILLEAPI_TOKEN" https://veille.io/api/usage | jq .
+```
+
+The response should look like this:
+
+```json
+{
+    "plan": "API",
+    "remaining": "14823"
+}
+```
+
+This command will return the number of remaining requests under your token.
+
+<Note>
+    Keep in mind that most examples in this documentation assume that you have set the `$VEILLEAPI_TOKEN` variable.
+</Note>
+
+## Wrapping up
+
+Congratulations! You have successfully authenticated with the Veille.io API using a generated token.
