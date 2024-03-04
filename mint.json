@@ -9,6 +9,10 @@
   "feedback": {
     "thumbsRating": true
   },
+  "modeToggle": {
+    "default": "dark",
+    "isHidden": false
+  },
   "favicon": "/favicon.png",
   "colors": {
     "primary": "#3466C2",
