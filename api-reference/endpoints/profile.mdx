@@ -21,7 +21,7 @@ description: "This endpoint allows you to scrape a LinkedIn profile."
 ### Response
 
 <ResponseField name="Profile" type="object">
-    <Expandable title="resume" defaultOpen={false} type="array">
+    <Expandable title="resume">
         <ResponseField name="field" type="string">
             Field of expertise
         </ResponseField>
@@ -62,7 +62,7 @@ description: "This endpoint allows you to scrape a LinkedIn profile."
             Date of extraction
         </ResponseField>
     </Expandable>
-    <Expandable title="contact" defaultOpen={false} type="object">
+    <Expandable title="contact">
         <ResponseField name="email" type="string">
             Email
         </ResponseField>
@@ -82,7 +82,7 @@ description: "This endpoint allows you to scrape a LinkedIn profile."
             Phone number
         </ResponseField>
     </Expandable>
-    <Expandable title="identity" defaultOpen={false} type="object">
+    <Expandable title="identity">
         <ResponseField name="region" type="string">
             Region
         </ResponseField>
