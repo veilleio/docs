@@ -12,7 +12,7 @@
   "favicon": "/favicon.png",
   "colors": {
     "primary": "#3466C2",
-    "light": "#55D799",
+    "light": "#3466C2",
     "dark": "#3466C2",
     "background": {
       "dark": "#171717"
