@@ -53,6 +53,7 @@
       "group": "Endpoints",
       "pages": [
         "api-reference/endpoints/profile",
+        "api-reference/endpoints/company",
         "api-reference/usage"
       ]
     }

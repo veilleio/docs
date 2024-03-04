@@ -1,5 +1,5 @@
 ---
-title: "Linkdin Profile Scraper"
+title: "LinkedIn Profile Scraper"
 api: "GET https://veille.io/api/v1/scraper/profile"
 description: "This endpoint allows you to scrape a LinkedIn profile."
 ---
@@ -14,13 +14,13 @@ description: "This endpoint allows you to scrape a LinkedIn profile."
 
 #### Search Query
 
-<ParamField query="query" type="string" required={true}>
-    Linkedin profile URL to check : `https://www.linkedin.com/in/username`
+<ParamField query="query" type="string" required={true} placeholder="https://www.linkedin.com/in/williamhgates">
+    Linkedin profile URL : `https://www.linkedin.com/in/username`
 </ParamField>
 
 ### Response
 
-<ResponseField name="Website" type="object">
+<ResponseField name="Profile" type="object">
     <Expandable title="resume" defaultOpen={false} type="array">
         <ResponseField name="field" type="string">
             Field of expertise
@@ -54,6 +54,79 @@ description: "This endpoint allows you to scrape a LinkedIn profile."
         </ResponseField>
         <ResponseField name="description" type="string">
             Description
+        </ResponseField>
+        <ResponseField name="profile_url" type="string">
+            Profile URL
+        </ResponseField>
+        <ResponseField name="date_extract" type="string">
+            Date of extraction
+        </ResponseField>
+    </Expandable>
+    <Expandable title="contact" defaultOpen={false} type="object">
+        <ResponseField name="email" type="string">
+            Email
+        </ResponseField>
+        <ResponseField name="address" type="string">
+            Address
+        </ResponseField>
+        <ResponseField name="twitter" type="string">
+            Twitter
+        </ResponseField>
+        <ResponseField name="website" type="string">
+            Website
+        </ResponseField>
+        <ResponseField name="birthdate" type="string">
+            Birthdate
+        </ResponseField>
+        <ResponseField name="phone_number" type="string">
+            Phone number
+        </ResponseField>
+    </Expandable>
+    <Expandable title="identity" defaultOpen={false} type="object">
+        <ResponseField name="region" type="string">
+            Region
+        </ResponseField>
+        <ResponseField name="address" type="string">
+            Address
+        </ResponseField>
+        <ResponseField name="country" type="string">
+            Country
+        </ResponseField>
+        <ResponseField name="summary" type="string">
+            Summary
+        </ResponseField>
+        <ResponseField name="lastname" type="string">
+            Last name
+        </ResponseField>
+        <ResponseField name="location" type="string">
+            Location
+        </ResponseField>
+        <ResponseField name="birthdate" type="string">
+            Birthdate
+        </ResponseField>
+        <ResponseField name="firstname" type="string">
+            First name
+        </ResponseField>
+        <ResponseField name="public_id" type="string">
+            Public ID
+        </ResponseField>
+        <ResponseField name="occupation" type="string">
+            Occupation
+        </ResponseField>
+        <ResponseField name="profile_id" type="string">
+            Profile ID
+        </ResponseField>
+        <ResponseField name="profile_url" type="string">
+            Profile URL
+        </ResponseField>
+        <ResponseField name="industry_name" type="string">
+            Industry name
+        </ResponseField>
+        <ResponseField name="profile_picture" type="string">
+            Profile picture
+        </ResponseField>
+        <ResponseField name="background_picture" type="string">
+            Background picture
         </ResponseField>
     </Expandable>
 </ResponseField>

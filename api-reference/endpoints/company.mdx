@@ -1,0 +1,108 @@
+---
+title: "LinkedIn Company Scraper"
+api: "GET https://veille.io/api/v1/scraper/company"
+description: "This endpoint allows you to scrape a LinkedIn company."
+---
+
+### Header
+
+<ParamField header="x-api-key" type="string" required={true}>
+    This parameter specifies the private key you'll need for Veille.io access.
+</ParamField>
+
+### Parameters
+
+#### Search Query
+
+<ParamField query="query" type="string" required={true} placeholder="https://www.linkedin.com/company/airbusgroup">
+    Linkedin company URL : `https://www.linkedin.com/company/companygroup`
+</ParamField>
+
+### Response
+
+<ResponseField name="Company" type="object">
+    <ResponseField name="city" type="string">
+        City of the company
+    </ResponseField>
+    <ResponseField name="region" type="string">
+        Region of the company
+    </ResponseField>
+    <ResponseField name="country" type="string">
+        Country of the company
+    </ResponseField>
+    <ResponseField name="tagline" type="string">
+        Tagline of the company
+    </ResponseField>
+    <ResponseField name="website" type="string">
+        Website of the company
+    </ResponseField>
+    <ResponseField name="industry" type="string">
+        Industry of the company
+    </ResponseField>
+    <ResponseField name="logo_url" type="string">
+        Logo URL of the company
+    </ResponseField>
+    <ResponseField name="company_id" type="string">
+        Company ID of the company
+    </ResponseField>
+    <ResponseField name="company_url" type="string">
+        Company URL of the company
+    </ResponseField>
+    <ResponseField name="description" type="string">
+        Description of the company
+    </ResponseField>
+    <ResponseField name="industry_id" type="string">
+        Industry ID of the company
+    </ResponseField>
+    <ResponseField name="staff_count" type="string">
+        Staff count of the company
+    </ResponseField>
+    <ResponseField name="staff_range" type="string">
+        Staff range of the company
+    </ResponseField>
+    <ResponseField name="company_name" type="string">
+        Company name of the company
+    </ResponseField>
+    <ResponseField name="specialities" type="string">
+        Specialities of the company
+    </ResponseField>
+    <ResponseField name="follower_count" type="string">
+        Follower count of the company
+    </ResponseField>
+    <ResponseField name="universal_name" type="string">
+        Universal name of the company
+    </ResponseField>
+</ResponseField>
+<RequestExample>
+
+```bash Example Request
+curl --location --request GET 'https://veille.io/api/v1/scraper/profile?query=https://www.linkedin.com/company/airbusgroup' \
+--header 'Content-Type: application/json' \
+--header 'x-api-key: <token>' 
+```
+
+</RequestExample>
+
+<ResponseExample>
+```json Response Example
+{
+    "city": "Blagnac Cedex",
+    "region": null,
+    "country": "FR",
+    "tagline": "We pioneer sustainable aerospace for a safe and united world.",
+    "website": "http://www.airbus.com",
+    "industry": "Aviation and Aerospace Component Manufacturing",
+    "logo_url": "https://media.licdn.com/dms/image/C4D0BAQF2j_LDG_TOzg/company-logo_400_400/0/1631375371457/airbusgroup_logo?e=1717027200&v=beta&t=vEdfoANb0Ns7TQURt39hnuJ4mHuq_7YRBnydFddDdIs",
+    "company_id": "2734",
+    "company_url": "https://www.linkedin.com/company/airbusgroup",
+    "description": "Airbus pioneers sustainable aerospace for a safe and united world. The Company constantly innovates to provide the most efficient and technologically-advanced solutions in aerospace, defence, and connected services. In commercial aircraft, Airbus offers the most modern and fuel-efficient airliners. Airbus is also a European leader in defence and security and one of the world's leading space businesses. In helicopters, Airbus provides the most efficient civil and military rotorcraft solutions worldwide.  \n\nAirbus approaches sustainability by respecting the planet, valuing people and enabling prosperity. These guiding principles are embedded in our operations and activities.\n\nIn 2022, the Company generated revenues of €58.8 billion and employed a workforce of around 134,000.",
+    "industry_id": "52",
+    "staff_count": "77332",
+    "staff_range": "10001-",
+    "company_name": "Airbus",
+    "specialities": "Aerospace, Defence, Space, Innovation, Cyber Security, IT, Engineering",
+    "follower_count": "2188668",
+    "universal_name": "airbusgroup"
+}
+```
+</ResponseExample>
